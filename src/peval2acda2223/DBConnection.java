@@ -98,11 +98,13 @@ public class DBConnection {
 
     /**
      * Method that receive a player name and show how many games played as visitor and as local
+     *      [It doesn't work the way I print it, I don't know why, is the same way that in the other select, I can't see the error when I print]
      * @param player String for the player name given by the user
      * @throws SQLException exception for the possible error at th query
      * @throws IOException
      */
     public void getGames(String player) throws SQLException, IOException {
+        System.out.println("Partidos de VISITANTE: ");
         ResultSet rsLoc = myStatement.executeQuery(String.format("SELECT count(partidos.codigo), partidos.temporada " +
                 "FROM equipos, partidos" +
                 " WHERE equipos.Nombre = partidos.equipo_visitante " +
@@ -110,7 +112,7 @@ public class DBConnection {
                 "( SELECT equipos.Nombre from equipos, jugadores where equipos.Nombre = jugadores.Nombre_equipo and jugadores.Nombre LIKE '%s')" +
                 " GROUP BY partidos.temporada", player));
         while(rsLoc.next()){
-            System.out.printf("Partidos: %d || Temporada %d", rsLoc.getInt(1), rsLoc.getInt(2));
+            System.out.printf("Partidos Locales: %d || Temporada %d", rsLoc.getInt(1), rsLoc.getInt(2));
         }
         rsLoc.close();
 
@@ -163,7 +165,6 @@ public class DBConnection {
                     case Types.NUMERIC:
                         System.out.print(resultSet.getBigDecimal(i));
                         break;
-                    default:
                 }
                 if (i != columnCount) {
                     System.out.print(" || ");
