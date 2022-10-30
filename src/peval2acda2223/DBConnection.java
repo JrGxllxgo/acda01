@@ -5,8 +5,9 @@ import java.sql.*;
 
 public class DBConnection {
 
-    private String myQuery;
-    DBConnection() {
+    private String SelectQuery;
+
+    DBConnection(String query) {
         try {
             // cargar el driver
             Class.forName("com.mysql.jdbc.Driver");
@@ -18,7 +19,9 @@ public class DBConnection {
             // preparamos la consulta
             Statement sentencia = (Statement) conexion.createStatement();
 
-            executeQuery(sentencia, myQuery);
+            this.SelectQuery = query;
+
+            executeSelectQuery(sentencia, SelectQuery);
 
             sentencia.close(); // Cerrar Statement
             conexion.close(); // Cerrar conexión
@@ -33,8 +36,8 @@ public class DBConnection {
         }
     }
 
-    private static void executeQuery(Statement sentencia, String myQuery) throws SQLException, IOException {
-        ResultSet rs = sentencia.executeQuery(myQuery);
+    private static void executeSelectQuery(Statement sentencia, String SelectQuery) throws SQLException, IOException {
+        ResultSet rs = sentencia.executeQuery(SelectQuery);
 
         printResultColumns(rs);
 
@@ -75,8 +78,8 @@ public class DBConnection {
                         break;
                     default:
                 }
-                if (i != columnCount){
-                    System.out.print(",");
+                if (i != columnCount) {
+                    System.out.print(" || ");
                 }
             }
             System.out.println("");
