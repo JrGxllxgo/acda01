@@ -22,12 +22,11 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException, SAXException {
 
         Tools myTools = new Tools();
-        DBConnection myDbConnection = new DBConnection();
 
         int numOption = 0;
         myTools.print("Bienvenido al menu de la PEVAL2");
 
-        while (numOption != 6) {
+        while (numOption != 7) {
 
             try {
                 myTools.print("\nOPCIONES" +
@@ -51,6 +50,8 @@ public class Main {
                     case 2:
                         break;
                     case 3:
+                        String city = myTools.keyBoardString("Introduzca la ciudad que desea consultar");
+                        new DBConnection("SELECT j.Nombre,j.Altura, j.Peso, j.Posicion, e.Nombre FROM jugadores j, equipos e WHERE (j.Nombre_equipo= e.Nombre) AND e.Ciudad LIKE " + "'" + city + "'");
                         break;
                     case 4:
                         break;

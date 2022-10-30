@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 
  * @author José Ramón Gallego Vélez
- * @date 024/10/2022
+ * @date 24/10/2022
  * @version 1.0
  * 
  * @info On this class we use basic methods to use in all class
