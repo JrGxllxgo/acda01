@@ -5,9 +5,14 @@ import java.sql.*;
 
 public class DBConnection {
 
-    private String SelectQuery;
+    private String myQuery;
+    private Statement myStatement;
 
-    DBConnection(String query) {
+    DBConnection(){
+        createBDConnection();
+    }
+
+    public void createBDConnection(){
         try {
             // cargar el driver
             Class.forName("com.mysql.jdbc.Driver");
@@ -17,31 +22,43 @@ public class DBConnection {
                     "root", "");
 
             // preparamos la consulta
-            Statement sentencia = (Statement) conexion.createStatement();
-
-            this.SelectQuery = query;
-
-            executeSelectQuery(sentencia, SelectQuery);
-
-            sentencia.close(); // Cerrar Statement
-            conexion.close(); // Cerrar conexión
+            myStatement = (Statement) conexion.createStatement();
 
         } catch (ClassNotFoundException cn) {
             cn.printStackTrace();
         } catch (
                 SQLException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
-    private static void executeSelectQuery(Statement sentencia, String SelectQuery) throws SQLException, IOException {
-        ResultSet rs = sentencia.executeQuery(SelectQuery);
+    public void executeInsertQuery(String localTeam, String visitorTeam, int localPts, int visitorPts, String season) throws SQLException {
+        ResultSet rs = myStatement.executeQuery("SELECT MAX(codigo) FROM partidos");
+        rs.next();
+        int matchCode = rs.getInt("MAX(codigo)")+1;
+        myStatement.executeUpdate(String.format("INSERT INTO partidos VALUES ('%d', '%s', '%s', '%d', '%d', '%s')", matchCode, localTeam, visitorTeam, localPts, visitorPts, season));
+
+        System.out.println("Partido anadido");
+
+        rs.close();
+    }
+    public void executeSelectQuery(String city) throws SQLException, IOException {
+        ResultSet rs = myStatement.executeQuery(String.format("SELECT j.Nombre,j.Altura, j.Peso, j.Posicion, e.Nombre FROM jugadores j, equipos e WHERE (j.Nombre_equipo= e.Nombre) AND e.Ciudad LIKE '%s'", city));
 
         printResultColumns(rs);
 
         rs.close(); // Cerrar ResultSet
+    }
+
+    public void executeUpdateQuery() throws SQLException {
+        myStatement.executeUpdate("UPDATE jugadores SET Posicion = 'PIVOTE' WHERE Nombre_equipo IN (SELECT nombre FROM equipos WHERE (Conferencia LIKE 'West') AND (Division LIKE 'Pacific') ) AND Posicion LIKE 'PIVOT'");
+        System.out.println(myStatement.getUpdateCount() + " registros afectados");
+
+    }
+
+    public void deleteTeam(String team) throws SQLException {
+        System.out.println(String.format("DELETE * FROM equipos WHERE nombre like '%s'", team));
+        //myStatement.executeUpdate(String.format("DELETE * FROM equipos WHERE nombre like '%s'", team));
     }
 
     public static void printResultColumns(ResultSet resultSet) throws SQLException, IOException {

@@ -1,6 +1,7 @@
 package peval2acda2223;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -22,6 +23,7 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException, SAXException {
 
         Tools myTools = new Tools();
+        DBConnection myConnection = new DBConnection();
 
         int numOption = 0;
         myTools.print("Bienvenido al menu de la PEVAL2");
@@ -48,16 +50,24 @@ public class Main {
                         }*/
                         break;
                     case 2:
-                        break;
+                        String localTeam = myTools.keyBoardString("Introduzca el nombre del equipo local");
+                        String visitorTeam = myTools.keyBoardString("Introduzca el nombre del equipo visitante");
+                        int localPts = myTools.keyBoardInt("Puntos del equipo local: ");
+                        int visitorPts = myTools.keyBoardInt("Puntos del equipo visitante: ");
+                        String season = myTools.keyBoardString("Introduzca la temporada: ");
+                        myConnection.executeInsertQuery(localTeam, visitorTeam, localPts, visitorPts, season);
                     case 3:
                         String city = myTools.keyBoardString("Introduzca la ciudad que desea consultar");
-                        new DBConnection("SELECT j.Nombre,j.Altura, j.Peso, j.Posicion, e.Nombre FROM jugadores j, equipos e WHERE (j.Nombre_equipo= e.Nombre) AND e.Ciudad LIKE " + "'" + city + "'");
+                        myConnection.executeSelectQuery(city);
                         break;
                     case 4:
                         break;
                     case 5:
+                        myConnection.executeUpdateQuery();
                         break;
                     case 6:
+                        String cityDel = myTools.keyBoardString("Introduzca el equipo que desea borrar");
+                        myConnection.deleteTeam(cityDel);
                         break;
                     case 7:
                         myTools.print("Hasta luego!!!");
@@ -68,6 +78,8 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 myTools.print("Introduzca valores correctos");
+            } catch (SQLException e) {
+                System.out.println(e);
             }
 
         }
