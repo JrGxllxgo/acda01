@@ -2,12 +2,12 @@ package BDOO_01;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
-import com.db4o.ObjectSet;
+
 public class E1Principal {
-    final static String BDPer = "D:/2 DAM/ACDA/db/db4o/DBE1Persona.yap";
+    final static String BDPER = "D:/2 DAM/ACDA/db/db4o/DBE1Persona.yap";
     public static void main(String[] args) {
         ObjectContainer
-                db=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),BDPer);
+                db=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), BDPER);
 
         //Creamos E1Personas
         E1Persona p1 = new E1Persona ("Juan", "Guadalajara");
