@@ -12,6 +12,31 @@ public class EjemploConsulta {
 
         ODB odb = ODBFactory.open("D:/2 DAM/ACDA/db/neodatis/jugadores.neo");
 
+        //consultaQuery(odb);
+
+        updateQuery(odb);
+    }
+
+    private static void updateQuery(ODB odb) {
+        IQuery query = new CriteriaQuery(Jugadores.class, Where.equal("nombre","Miguel"));
+
+        Objects<Jugadores> objects = odb.getObjects(query);
+
+        Jugadores jug = (Jugadores) objects.getFirst();
+        jug.setDeporte("Baloncesto");
+        odb.store(jug);
+
+        int i = 1;
+        while(objects.hasNext()){
+            objects.next();
+            System.out.printf("%d: %s, %s, %s, %d, %n", i++, jug.getNombre(), jug.getDeporte(), jug.getCiudad(), jug.getEdad());
+        }
+
+        odb.commit();
+        odb.close();
+    }
+
+    private static void consultaQuery(ODB odb) {
         IQuery query = new CriteriaQuery(Jugadores.class, Where.equal("deporte","tenis"));
         query.orderByAsc("nombre,edad");
 
