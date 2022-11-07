@@ -1,4 +1,4 @@
-package BDOO_01;
+package BDOO_01.db4;
 
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;

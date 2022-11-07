@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Added .jar for neodatis">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/neodatis_odb_1_9_30_689.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BDOO_01/EjemploNeodatis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BDOO_01/Jugadores.java" afterDir="false" />
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Start with neodatis">
+      <change afterPath="$PROJECT_DIR$/src/BDOO_01/neodatis/EjemploConsulta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BDOO_01/neodatis/EjemploOID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/E1Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/db4/E1Delete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/db4/E1Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/db4/E1Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/db4/E1Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/db4/E1Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/EjemploNeodatis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/neodatis/EjemploNeodatis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/Jugadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/neodatis/Jugadores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/2 DAM/ACDA/acda01",
+    "last_opened_file_path": "D:/2 DAM/ACDA/acda01/src/BDOO_01/neodatis",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +62,11 @@
     "settings.editor.selected.configurable": "Errors"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2 DAM\ACDA\acda01\src\BDOO_01\neodatis" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666592772710</updated>
       <workItem from="1667381374350" duration="1074000" />
-      <workItem from="1667805523822" duration="784000" />
+      <workItem from="1667805523822" duration="3093000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -97,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667378643786</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Start with neodatis">
+      <created>1667806622814</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667806622814</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +135,8 @@
     <MESSAGE value="Set reader and new branch" />
     <MESSAGE value="Set update and delete classes" />
     <MESSAGE value="Added .jar for neodatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .jar for neodatis" />
+    <MESSAGE value="Start with neodatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start with neodatis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

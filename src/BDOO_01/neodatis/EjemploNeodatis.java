@@ -1,4 +1,4 @@
-package BDOO_01;
+package BDOO_01.neodatis;
 
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
