@@ -1,4 +1,4 @@
-package BDOO_01;
+package BDOO_01.db4;
 
 public class E1Persona {
     private String nombre;

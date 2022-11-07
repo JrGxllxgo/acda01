@@ -1,4 +1,4 @@
-package BDOO_01;
+package BDOO_01.neodatis;
 
 public class Jugadores {
     private String nombre;
