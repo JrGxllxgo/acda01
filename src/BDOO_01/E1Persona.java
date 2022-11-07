@@ -11,8 +11,6 @@ public class E1Persona {
     public E1Persona(){
         this.nombre=null;
         this.ciudad=null;
-
-
     }
 
     //GETTERS Y SETTERS

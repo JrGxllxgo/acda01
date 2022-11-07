@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Set update and delete classes">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Added .jar for neodatis">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/neodatis_odb_1_9_30_689.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BDOO_01/EjemploNeodatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BDOO_01/Jugadores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BDOO_01/E1Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/E1Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2GZOj27dfYlGxQzJTl9cgCy0lDo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,7 +46,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/2 DAM/ACDA/Librerias/neodatis-odb-1.9.30.689/neodatis-odb-1.9.30-689/neodatis-odb-1.9.30.689.jar",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/2 DAM/ACDA/acda01",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,6 +66,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666592772710</updated>
+      <workItem from="1667381374350" duration="1074000" />
+      <workItem from="1667805523822" duration="784000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -79,8 +90,18 @@
       <option name="project" value="LOCAL" />
       <updated>1667377813972</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added .jar for neodatis">
+      <created>1667378643786</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667378643786</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -97,7 +118,8 @@
     <MESSAGE value="Commit 4 start with BD00" />
     <MESSAGE value="Set reader and new branch" />
     <MESSAGE value="Set update and delete classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set update and delete classes" />
+    <MESSAGE value="Added .jar for neodatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .jar for neodatis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
