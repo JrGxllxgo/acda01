@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="neodatis-odb-1.9.30.689">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Librerias/neodatis-odb-1.9.30.689/neodatis-odb-1.9.30-689/neodatis-odb-1.9.30.689.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
