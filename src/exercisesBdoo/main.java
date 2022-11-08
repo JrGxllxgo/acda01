@@ -9,7 +9,7 @@ public class main {
         //creo los paises
         Country c1 = new Country(0,"Espana");
         Country c2 = new Country(1, "Portugal");
-        Country c3 = new Country(3, "Alemania");
+        Country c3 = new Country(2, "Alemania");
 
         //Creo los jugadores
         Players j1 = new Players("Maria", "volleyball", c1, 14);
