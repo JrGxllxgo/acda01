@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="change packages and consulta + delete">
-      <change afterPath="$PROJECT_DIR$/src/exercisesBdoo/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercisesBdoo/Players.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercisesBdoo/ViewInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercisesBdoo/main.java" afterDir="false" />
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Strart execercises with neodatis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BDOO_01/neodatis/EjemploConsulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BDOO_01/neodatis/EjemploConsulta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercisesBdoo/ViewInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercisesBdoo/ViewInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exercisesBdoo/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercisesBdoo/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval2acda2223/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval2acda2223/DBConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,23 +40,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/2 DAM/ACDA/acda01/src/BDOO_01/neodatis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/2 DAM/ACDA/acda01/src/BDOO_01/neodatis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2 DAM\ACDA\acda01\src\BDOO_01\neodatis" />
@@ -75,7 +74,9 @@
       <option name="presentableId" value="Default" />
       <updated>1666592772710</updated>
       <workItem from="1667381374350" duration="1074000" />
-      <workItem from="1667805523822" duration="5746000" />
+      <workItem from="1667805523822" duration="5840000" />
+      <workItem from="1667900996339" duration="296000" />
+      <workItem from="1667930421815" duration="2451000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -119,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667808813165</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Strart execercises with neodatis">
+      <created>1667811386817</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667811386817</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +151,8 @@
     <MESSAGE value="Added .jar for neodatis" />
     <MESSAGE value="Start with neodatis" />
     <MESSAGE value="change packages and consulta + delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="change packages and consulta + delete" />
+    <MESSAGE value="Strart execercises with neodatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Strart execercises with neodatis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

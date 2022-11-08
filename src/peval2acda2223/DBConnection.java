@@ -164,6 +164,7 @@ public class DBConnection {
                         System.out.print(resultSet.getBigDecimal(i));
                         break;
                     default:
+                        System.out.println("hola");
                 }
                 if (i != columnCount) {
                     System.out.print(" || ");
