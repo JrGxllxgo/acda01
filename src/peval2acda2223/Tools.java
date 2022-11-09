@@ -42,6 +42,6 @@ public class Tools {
 	public static String keyBoardString(String text) {
 		Scanner key = new Scanner(System.in);
 		print(text);
-		return key.next();
+		return key.nextLine();
 	}
 }

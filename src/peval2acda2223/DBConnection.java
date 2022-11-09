@@ -24,6 +24,7 @@ public class DBConnection {
      */
     public void createBDConnection(){
         try {
+
             //starting the driver
             Class.forName("com.mysql.jdbc.Driver");
 
@@ -105,23 +106,26 @@ public class DBConnection {
     public void getGames(String player) throws SQLException, IOException {
         ResultSet rsLoc = myStatement.executeQuery(String.format("SELECT count(partidos.codigo), partidos.temporada " +
                 "FROM equipos, partidos" +
+                " WHERE equipos.Nombre = partidos.equipo_local " +
+                "and partidos.equipo_local like" +
+                "( SELECT equipos.Nombre from equipos, jugadores where equipos.Nombre = jugadores.Nombre_equipo and jugadores.Nombre LIKE '%s')" +
+                " GROUP BY partidos.temporada", player));
+        System.out.println("PARTIDOS DE LOCAL");
+        while(rsLoc.next()){
+            System.out.printf("%n Partidos: %d || Temporada %s", rsLoc.getInt(1), rsLoc.getString(2));
+        }
+        rsLoc.close();
+
+        System.out.println("PARTIDOS DE VISITANTE: ");
+        ResultSet rsVis = myStatement.executeQuery(String.format("SELECT count(partidos.codigo), partidos.temporada " +
+                "FROM equipos, partidos" +
                 " WHERE equipos.Nombre = partidos.equipo_visitante " +
                 "and partidos.equipo_local like" +
                 "( SELECT equipos.Nombre from equipos, jugadores where equipos.Nombre = jugadores.Nombre_equipo and jugadores.Nombre LIKE '%s')" +
                 " GROUP BY partidos.temporada", player));
-        while(rsLoc.next()){
-            System.out.printf("Partidos: %d || Temporada %d", rsLoc.getInt(1), rsLoc.getInt(2));
+        while(rsVis.next()){
+            System.out.printf("%n Partidos: %d || Temporada %s", rsVis.getInt(1), rsVis.getString(2));
         }
-        rsLoc.close();
-
-        System.out.println("Partidos de VISITANTE: ");
-        ResultSet rsVis = myStatement.executeQuery(String.format("SELECT count(partidos.codigo), partidos.temporada " +
-                "FROM equipos, partidos" +
-                " WHERE equipos.Nombre = partidos.equipo_visitante " +
-                "and partidos.equipo_visitante like" +
-                "( SELECT equipos.Nombre from equipos, jugadores where equipos.Nombre = jugadores.Nombre_equipo and jugadores.Nombre LIKE '%s')" +
-                " GROUP BY partidos.temporada", player));
-        printResultColumns(rsVis);
         rsVis.close();
     }
 
@@ -164,7 +168,6 @@ public class DBConnection {
                         System.out.print(resultSet.getBigDecimal(i));
                         break;
                     default:
-                        System.out.println("hola");
                 }
                 if (i != columnCount) {
                     System.out.print(" || ");
