@@ -1,17 +1,37 @@
 package exercisesBdoo;
 
+import BDOO_01.neodatis.Jugadores;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
+import org.neodatis.odb.OID;
 import org.neodatis.odb.Objects;
-import org.neodatis.odb.core.query.IQuery;
-import org.neodatis.odb.core.query.criteria.Where;
-import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
+import org.neodatis.odb.core.oid.OIDFactory;
 
-public class ViewInformation {
+public class allQuery {
     public static void main(String[] args) {
 
         ODB odb = ODBFactory.open("D:/2 DAM/ACDA/db/neodatis/equipos.neo");
 
+        viewCountryData(odb);
+        //deleteData(odb);
+        //createPlayer(odb);
+        odb.close();
+    }
+
+    private static void createPlayer(ODB odb) {
+    }
+
+    private static void deleteData(ODB odb) {
+
+        OID oid = OIDFactory.buildObjectOID(5);
+
+        Players players = (Players) odb.getObjectFromId(oid);
+        System.out.println("Deleting player -->" + players.getName() + "*" + players.getSport() + "*" + players.getCountry().getCountryName() + "*" + players.getAge());
+        odb.delete(players);
+        odb.commit();
+    }
+
+    private static void viewCountryData(ODB odb) {
         Objects<Country> objCountry =  odb.getObjects(Country.class);
         System.out.printf("%d Countries: %n", objCountry.size());
 
@@ -30,7 +50,5 @@ public class ViewInformation {
                 }
             }
         }
-
-        odb.close();
     }
 }

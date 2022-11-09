@@ -3,7 +3,6 @@ package peval2acda2223;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
