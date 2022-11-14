@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="Correction peval2acda2223">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="all classes created">
+      <change afterPath="$PROJECT_DIR$/src/peval3/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/peval3/NeoConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercisesBdoo/allQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercisesBdoo/allQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Prestamos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Prestamos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="BDOO-JRGV" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +62,7 @@
       <recent name="D:\2 DAM\ACDA\acda01\src\BDOO_01\neodatis" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="peval3" />
       <recent name="exercisesBdoo" />
     </key>
   </component>
@@ -95,6 +99,7 @@
       <workItem from="1667900996339" duration="296000" />
       <workItem from="1667930421815" duration="12266000" />
       <workItem from="1668064139954" duration="12000" />
+      <workItem from="1668411161580" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -159,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667985487976</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="start w/peval 3">
+      <created>1668411388294</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668411388294</updated>
+    </task>
+    <task id="LOCAL-00011" summary="all classes created">
+      <created>1668414171647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668414171647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +205,9 @@
     <MESSAGE value="Strart execercises with neodatis" />
     <MESSAGE value="Finish exercise 2 w/Neodatis" />
     <MESSAGE value="Correction peval2acda2223" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction peval2acda2223" />
+    <MESSAGE value="start w/peval 3" />
+    <MESSAGE value="all classes created" />
+    <option name="LAST_COMMIT_MESSAGE" value="all classes created" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
