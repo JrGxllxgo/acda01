@@ -1,6 +1,5 @@
 package exercisesBdoo;
 
-import BDOO_01.neodatis.Jugadores;
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.OID;
@@ -13,8 +12,8 @@ public class allQuery {
         ODB odb = ODBFactory.open("D:/2 DAM/ACDA/db/neodatis/equipos.neo");
 
         viewCountryData(odb);
-        //deleteData(odb);
-        //createPlayer(odb);
+        deleteData(odb);
+        createPlayer(odb);
         odb.close();
     }
 
