@@ -7,11 +7,11 @@ public class Prestamos {
      */
     private int numeroPedido;
     /**
-     *
+     * Atribute type Usuario for the user data
      */
     private Libros codigoLibro;
     /**
-     *
+     * Atribute type Libros for the book data
      */
     private Usuario codigoUsuario;
     /**
@@ -31,8 +31,8 @@ public class Prestamos {
      * Constructor of Pedidos class
      *
      * @param numeroPedido Integer for order number
-     * @param codigoLibro
-     * @param codigoUsuario
+     * @param codigoLibro Atribute type Libros for the book data
+     * @param codigoUsuario Atribute type Usuario for the user data
      * @param fechaSalida String for exit date
      * @param fechaMaxDevolucion String for the maximum date to return the book
      * @param fechaDevolucion String for date of the return
