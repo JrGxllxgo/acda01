@@ -1,6 +1,7 @@
 package peval3;
 
 
+import java.sql.SQLException;
 import java.util.InputMismatchException;
 
 public class Main {
@@ -8,6 +9,7 @@ public class Main {
 
         Tools myTools = new Tools();
 
+        String MYPATH = "D:\\2 DAM\\ACDA\\acda01\\src\\peval3\\biblioteca.neo";
 
         /**
          * Integer numOption give you a number to use at the menu
@@ -17,7 +19,8 @@ public class Main {
 
         while(numOption != 7){
             try{
-                myTools.print("Introduzca una de las opciones:" +
+
+                numOption = myTools.keyBoardInt("Introduzca una de las opciones:" +
                         "\n0: Crear Base de Datos neodatis" +
                         "\n1: Dar de alta un libro" +
                         "\n2: Dar de baja un usuario" +
@@ -26,9 +29,9 @@ public class Main {
                         "\n5: Libro de un género según precio máximo" +
                         "\n6: Préstamo por provincia en x tiempo" +
                         "\n7: SALIR");
-
                 switch (numOption){
                     case 0:
+                        new TransferData(MYPATH);
                         break;
                     case 1:
                         break;
@@ -49,6 +52,8 @@ public class Main {
                 }
             }catch (InputMismatchException e) { //controlling that the user not introduce text
                 myTools.print("Introduzca valores correctos");
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
         }
     }

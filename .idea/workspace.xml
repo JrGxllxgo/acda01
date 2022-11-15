@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="connection created">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="start setting data on neodatis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/TransferData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/NeoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/NeoConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/NeoConnection.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <recent name="exercisesBdoo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.peval3.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="peval2acda2223.Main" />
       <module name="acda01" />
@@ -78,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="peval3.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="peval3.Main" />
+      <module name="acda01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="peval3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.peval3.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -98,7 +113,8 @@
       <workItem from="1667930421815" duration="12266000" />
       <workItem from="1668064139954" duration="12000" />
       <workItem from="1668411161580" duration="4924000" />
-      <workItem from="1668501385319" duration="1426000" />
+      <workItem from="1668501385319" duration="4465000" />
+      <workItem from="1668535080266" duration="3166000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -184,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668415981766</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="start setting data on neodatis">
+      <created>1668502930132</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668502930132</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +237,8 @@
     <MESSAGE value="start w/peval 3" />
     <MESSAGE value="all classes created" />
     <MESSAGE value="connection created" />
-    <option name="LAST_COMMIT_MESSAGE" value="connection created" />
+    <MESSAGE value="start setting data on neodatis" />
+    <option name="LAST_COMMIT_MESSAGE" value="start setting data on neodatis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
