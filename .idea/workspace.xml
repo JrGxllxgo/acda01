@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="all classes created">
-      <change afterPath="$PROJECT_DIR$/src/peval3/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/peval3/NeoConnection.java" afterDir="false" />
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="connection created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Prestamos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Prestamos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/NeoConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/NeoConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,8 @@
       <workItem from="1667900996339" duration="296000" />
       <workItem from="1667930421815" duration="12266000" />
       <workItem from="1668064139954" duration="12000" />
-      <workItem from="1668411161580" duration="4647000" />
+      <workItem from="1668411161580" duration="4924000" />
+      <workItem from="1668501385319" duration="1426000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668414171647</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="connection created">
+      <created>1668415981766</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668415981766</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +213,8 @@
     <MESSAGE value="Correction peval2acda2223" />
     <MESSAGE value="start w/peval 3" />
     <MESSAGE value="all classes created" />
-    <option name="LAST_COMMIT_MESSAGE" value="all classes created" />
+    <MESSAGE value="connection created" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection created" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
