@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="start setting data on neodatis">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="end TransferData">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/TransferData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/NeoConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/TransferData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/TransferData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,7 @@
       <workItem from="1668064139954" duration="12000" />
       <workItem from="1668411161580" duration="4924000" />
       <workItem from="1668501385319" duration="4465000" />
-      <workItem from="1668535080266" duration="3166000" />
+      <workItem from="1668535080266" duration="9339000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -207,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668502930132</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="end TransferData">
+      <created>1668538521481</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668538521481</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +244,8 @@
     <MESSAGE value="all classes created" />
     <MESSAGE value="connection created" />
     <MESSAGE value="start setting data on neodatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="start setting data on neodatis" />
+    <MESSAGE value="end TransferData" />
+    <option name="LAST_COMMIT_MESSAGE" value="end TransferData" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

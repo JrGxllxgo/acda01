@@ -8,30 +8,36 @@ import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 public class TransferData {
     private Statement myStatement;
 
-    TransferData(String MYPATH) throws SQLException {
-        createBDConnection();
+    private ODB odb;
+    TransferData(String MYPATH, String DBNAME, String DBUSER) throws SQLException {
+        createBDConnection(DBNAME, DBUSER);
         createNeoDB(MYPATH);
     }
 
-    private void createNeoDB(String MYPATH) throws SQLException {
-        ODB odb = ODBFactory.open(MYPATH);
+    /**
+     * Method to create our Neodatis file and call others to add data
+     * @param MYPATH String that has the file path
+     * @throws SQLException
+     */
+    public void createNeoDB(String MYPATH) throws SQLException {
+        odb = ODBFactory.open(MYPATH);
         setBooksData(odb);
         setUsersData(odb);
         setPtmosData(odb);
         odb.close();
     }
 
-    public void createBDConnection() {
+    /**
+     * Method were we create the connection with the DB
+     */
+    public void createBDConnection(String DBNAME, String DBUSER) {
         try {
 
-            //starting the driver
             Class.forName("com.mysql.jdbc.Driver");
 
-            //stablishing the connection
-            Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/biblioteca",
-                    "root", "");
+            Connection connection = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/" + DBNAME,
+                    DBUSER, "");
 
-            //startint the statement for the methods
             myStatement = (Statement) connection.createStatement();
 
         } catch (ClassNotFoundException cn) {
@@ -41,6 +47,11 @@ public class TransferData {
         }
     }
 
+    /**
+     * Method were we get data from Libros at our DB and transfer it to our neodatis file
+     * @param odb ODB for our neo file
+     * @throws SQLException
+     */
     public void setBooksData(ODB odb) throws SQLException {
         ResultSet bookRs = myStatement.executeQuery("SELECT * FROM libros");
 
@@ -61,6 +72,11 @@ public class TransferData {
         odb.commit();
     }
 
+    /**
+     * Method were we get data from Usuario at our DB and transfer it to our neodatis file
+     * @param odb ODB for our neo file
+     * @throws SQLException
+     */
     public void setUsersData(ODB odb) throws SQLException {
         ResultSet userRs = myStatement.executeQuery("SELECT * FROM usuario");
 
@@ -79,6 +95,11 @@ public class TransferData {
         odb.commit();
     }
 
+    /**
+     * Method were we get data from Prestamos at our DB and transfer it to our neodatis file
+     * @param odb ODB for our neo file
+     * @throws SQLException
+     */
     public void setPtmosData(ODB odb) throws SQLException {
         ResultSet ptmosRs = myStatement.executeQuery("SELECT * FROM prestamos");
 
@@ -92,5 +113,9 @@ public class TransferData {
         }
         ptmosRs.close();
         odb.commit();
+    }
+
+    public ODB getOdb() {
+        return odb;
     }
 }
