@@ -51,6 +51,7 @@ public class Main {
                         deleteUser(MYPATH);
                         break;
                     case 3:
+                        editPrst(MYPATH);
                         break;
                     case 4:
                         break;
@@ -69,6 +70,42 @@ public class Main {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    private static void editPrst(String mypath) {
+        ODB odb = ODBFactory.open(mypath);
+
+        showPrst(odb);
+
+        int code = myTools.keyBoardInt("Código del Préstamo a cambiar: ");
+
+        IQuery getPrst = new CriteriaQuery(Prestamos.class, Where.equal("numeroPedido", code));
+
+        try{
+            Prestamos prestamos = (Prestamos) odb.getObjects(getPrst).getFirst();
+            System.out.println("------------ Datos del Préstamo seleccionado ---------------" +
+                    "\nNombre del Libro: " + prestamos.getCodigoLibro().getNombreLibro() +
+                    "\nNombre del Usuario: " + prestamos.getCodigoUsuario().getNombre() +
+                    "\n-------------------------------------------------------------");
+
+            showUser(odb);
+
+            int numUser = myTools.keyBoardInt("Introduzca el numero del nuevo usuario: ");
+
+            try{
+                IQuery getUser = new CriteriaQuery(Usuario.class, Where.equal("codigoUsuario", numUser));
+                Usuario usuario = (Usuario) odb.getObjects(getUser).getFirst();
+                prestamos.setCodigoUsuario(usuario);
+                odb.store(usuario);
+                odb.commit();
+            }catch (IndexOutOfBoundsException e) {
+                myTools.print("El usuario seleccionado no existe");
+            }
+        }catch (IndexOutOfBoundsException e) {
+            myTools.print("El préstamo no existe");
+        }
+
+        odb.close();
     }
 
     private static void deleteUser(String mypath) {
@@ -106,6 +143,26 @@ public class Main {
         odb.delete(checkPrst);
 
         odb.commit();
+    }
+
+
+    /**
+     * Method where we show to the user all Prestamos
+     * @param odb ODB that has our Neodatis file
+     */
+    private static void showPrst(ODB odb) {
+        Objects<Prestamos> objects = odb.getObjects(Prestamos.class);
+
+        while(objects.hasNext()){
+            Prestamos prestamo = objects.next();
+            myTools.print("Numero de Pedido: " + prestamo.getNumeroPedido() +
+                    "\nCodigo Libro: " +  prestamo.getCodigoLibro().getNombreLibro() +
+                    "\nNombre Usuario: " +  prestamo.getCodigoUsuario().getNombre() +
+                    "\nFecha Salida: " +  prestamo.getFechaSalida() +
+                    "\nFecha Máxima de Devolución: " +  prestamo.getFechaMaxDevolucion() +
+                    "\nFecha de Devolución: " +  prestamo.getFechaDevolucion());
+            myTools.print("----------------------------------------------------");
+        }
     }
 
     /**

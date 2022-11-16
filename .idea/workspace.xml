@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="creating new book">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="create conditions and delete on cascade User/prstmos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Tools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,8 @@
       <workItem from="1668411161580" duration="4924000" />
       <workItem from="1668501385319" duration="4465000" />
       <workItem from="1668535080266" duration="10077000" />
-      <workItem from="1668582895835" duration="9222000" />
+      <workItem from="1668582895835" duration="9509000" />
+      <workItem from="1668619943348" duration="3080000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -220,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668546216477</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="create conditions and delete on cascade User/prstmos">
+      <created>1668592356621</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668592356621</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +262,8 @@
     <MESSAGE value="start setting data on neodatis" />
     <MESSAGE value="end TransferData" />
     <MESSAGE value="creating new book" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating new book" />
+    <MESSAGE value="create conditions and delete on cascade User/prstmos" />
+    <option name="LAST_COMMIT_MESSAGE" value="create conditions and delete on cascade User/prstmos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
