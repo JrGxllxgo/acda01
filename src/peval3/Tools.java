@@ -29,7 +29,7 @@ public class Tools {
 	 */
 	public static int keyBoardInt(String text) {
 		Scanner key = new Scanner(System.in);
-		print(text);
+		System.out.print(text);
 		return key.nextInt();
 	}
 
@@ -41,7 +41,7 @@ public class Tools {
 	 */
 	public static String keyBoardString(String text) {
 		Scanner key = new Scanner(System.in);
-		print(text);
+		System.out.print(text);
 		return key.nextLine();
 	}
 }
