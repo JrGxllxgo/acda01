@@ -85,15 +85,21 @@ public class Main {
         try{
             Usuario user = (Usuario) odb.getObjects(queryUserCode).getFirst();
             IQuery queryPrst = odb.criteriaQuery(Prestamos.class, Where.equal("codigoUsuario", user));
-            Prestamos prst = (Prestamos) odb.getObjects(queryPrst).getFirst();
+            Objects<Prestamos> prestamosUsuario = odb.getObjects(queryPrst);
 
-            ICriterion compare = Where.gt("fechaDevolucion",prst.getFechaMaxDevolucion());
-            System.out.println(compare);
+            while (prestamosUsuario.hasNext()){
+                Prestamos myPrst = prestamosUsuario.next();
+                ICriterion compareFecha = Where.gt("fechaDevolucion",myPrst.getFechaMaxDevolucion());
+                CriteriaQuery queryFechas = new CriteriaQuery(Prestamos.class, compareFecha);
+
+                Prestamos prst = (Prestamos) odb.getObjects(queryFechas).getFirst();
+
+                System.out.println(prst.getNumeroPedido());
+            }
+
         }catch (IndexOutOfBoundsException e){
             myTools.print("El usuario no existe");
         }
-
-
     }
 
     private static void editPrst(String mypath) {
