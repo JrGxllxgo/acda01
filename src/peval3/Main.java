@@ -4,6 +4,7 @@ import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
+import org.neodatis.odb.core.query.criteria.ICriterion;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 import org.neodatis.odb.impl.core.query.values.ValuesCriteriaQuery;
@@ -54,6 +55,7 @@ public class Main {
                         editPrst(MYPATH);
                         break;
                     case 4:
+                        prstData(MYPATH);
                         break;
                     case 5:
                         break;
@@ -70,6 +72,28 @@ public class Main {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    private static void prstData(String mypath) {
+        ODB odb = ODBFactory.open(mypath);
+        showUser(odb);
+
+        int codigoUsuario = myTools.keyBoardInt("Introduzca el código del Usuario");
+
+        IQuery queryUserCode = new CriteriaQuery(Usuario.class, Where.equal("codigoUsuario", codigoUsuario));
+
+        try{
+            Usuario user = (Usuario) odb.getObjects(queryUserCode).getFirst();
+            IQuery queryPrst = odb.criteriaQuery(Prestamos.class, Where.equal("codigoUsuario", user));
+            Prestamos prst = (Prestamos) odb.getObjects(queryPrst).getFirst();
+
+            ICriterion compare = Where.gt("fechaDevolucion",prst.getFechaMaxDevolucion());
+            System.out.println(compare);
+        }catch (IndexOutOfBoundsException e){
+            myTools.print("El usuario no existe");
+        }
+
+
     }
 
     private static void editPrst(String mypath) {
@@ -114,8 +138,9 @@ public class Main {
 
         int codigoUsuario = myTools.keyBoardInt("Introduzca el código del Usuario");
 
+        IQuery queryCode = new CriteriaQuery(Usuario.class, Where.equal("codigoUsuario", codigoUsuario));
+
         try{
-            IQuery queryCode = new CriteriaQuery(Usuario.class, Where.equal("codigoUsuario", codigoUsuario));
             Usuario checkCode = (Usuario) odb.getObjects(queryCode).getFirst();
             deleteUserPrest(checkCode, odb);
             myTools.print("Borrando a:" +
@@ -144,7 +169,6 @@ public class Main {
 
         odb.commit();
     }
-
 
     /**
      * Method where we show to the user all Prestamos

@@ -1,5 +1,8 @@
 package peval3;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -12,6 +15,23 @@ import java.util.Scanner;
  */
 public class Tools {
 
+	/**
+	 * Method to transform a String with a date to a date type Daate
+	 * @param fecha String with the date
+	 * @return Date with new date
+	 */
+	public Date transformDate(String fecha){
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+		Date newFecha = null;
+
+		try{
+			newFecha = format.parse (fecha);
+		} catch (ParseException e) {
+			throw new RuntimeException(e);
+		}
+
+		return newFecha;
+	}
 	/**
 	 * Method that receive a text and prints it
 	 * 
