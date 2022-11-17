@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="modificar prestamo hecho">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="end prestamos tarde, falta darle formato">
+      <change afterPath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/peval3/Gestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Prestamos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Prestamos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Tools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +119,9 @@
       <workItem from="1668535080266" duration="10077000" />
       <workItem from="1668582895835" duration="9509000" />
       <workItem from="1668619943348" duration="5754000" />
-      <workItem from="1668669082268" duration="1783000" />
+      <workItem from="1668669082268" duration="2041000" />
+      <workItem from="1668673560375" duration="1795000" />
+      <workItem from="1668676524237" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -238,7 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668623653086</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="starting fechas">
+      <created>1668670973313</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668670973313</updated>
+    </task>
+    <task id="LOCAL-00019" summary="end prestamos tarde, falta darle formato">
+      <created>1668674795203</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668674795203</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +291,9 @@
     <MESSAGE value="creating new book" />
     <MESSAGE value="create conditions and delete on cascade User/prstmos" />
     <MESSAGE value="modificar prestamo hecho" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificar prestamo hecho" />
+    <MESSAGE value="starting fechas" />
+    <MESSAGE value="end prestamos tarde, falta darle formato" />
+    <option name="LAST_COMMIT_MESSAGE" value="end prestamos tarde, falta darle formato" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
