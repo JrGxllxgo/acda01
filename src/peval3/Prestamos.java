@@ -1,5 +1,7 @@
 package peval3;
 
+import java.util.Date;
+
 public class Prestamos {
 
     /**
@@ -15,17 +17,17 @@ public class Prestamos {
      */
     private Usuario codigoUsuario;
     /**
-     * String for exit date
+     * Date for exit date
      */
-    private String fechaSalida;
+    private Date fechaSalida;
     /**
-     * String for the maximum date to return the book
+     * Date for the maximum date to return the book
      */
-    private String fechaMaxDevolucion;
+    private Date fechaMaxDevolucion;
     /**
-     * String for date of the return
+     * Date for date of the return
      */
-    private String fechaDevolucion;
+    private Date fechaDevolucion;
 
     /**
      * Constructor of Pedidos class
@@ -41,9 +43,9 @@ public class Prestamos {
         this.numeroPedido = numeroPedido;
         this.codigoLibro = codigoLibro;
         this.codigoUsuario = codigoUsuario;
-        this.fechaSalida = fechaSalida;
-        this.fechaMaxDevolucion = fechaMaxDevolucion;
-        this.fechaDevolucion = fechaDevolucion;
+        this.fechaSalida = new Tools().transformDate(fechaSalida);
+        this.fechaMaxDevolucion = new Tools().transformDate(fechaMaxDevolucion);
+        this.fechaDevolucion = new Tools().transformDate(fechaDevolucion);
     }
 
     /**
@@ -73,27 +75,27 @@ public class Prestamos {
         this.codigoUsuario = codigoUsuario;
     }
 
-    public String getFechaSalida() {
+    public Date getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(String fechaSalida) {
+    public void setFechaSalida(Date fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
-    public String getFechaMaxDevolucion() {
+    public Date getFechaMaxDevolucion() {
         return fechaMaxDevolucion;
     }
 
-    public void setFechaMaxDevolucion(String fechaMaxDevolucion) {
+    public void setFechaMaxDevolucion(Date fechaMaxDevolucion) {
         this.fechaMaxDevolucion = fechaMaxDevolucion;
     }
 
-    public String getFechaDevolucion() {
+    public Date getFechaDevolucion() {
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(String fechaDevolucion) {
+    public void setFechaDevolucion(Date fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
 }
