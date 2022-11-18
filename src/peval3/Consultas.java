@@ -1,5 +1,12 @@
 package peval3;
 
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Class where we do our queries
+ */
+
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
@@ -9,11 +16,42 @@ import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
 
 public class Consultas {
+
+    /**
+     * Classes that we´ll use
+     */
     private static Tools myTools = new Tools();
     private static MostrarDatos show = new MostrarDatos();
-    public static void genreBook(String mypath) {
-    }
+    private static Comprobaciones check = new Comprobaciones();
 
+    /**
+     * Method to get the genre of our book
+     * @param mypath String with the path of our neodatis file
+     */
+    public static void genreBook(String mypath) {
+        ODB odb = ODBFactory.open(mypath);
+
+        show.showBooks(odb);
+
+        String generoLibro = myTools.keyBoardString("Introduzca el Genero del Libro: ");
+        int precioTope = myTools.keyBoardInt("Introduzca el Precio Maximo a consultar: ");
+
+        if(check.checkGenero(generoLibro, odb)){
+            IQuery getLibros = new CriteriaQuery(Libros.class, Where.equal("genero", generoLibro));
+            Libros libro = (Libros) odb.getObjects(getLibros).getFirst();
+            ICriterion price = Where.le("precioLibro", precioTope);
+            System.out.println(price);
+        }else{
+            myTools.print("El genero introducido no existe");
+        }
+
+        odb.close();
+    }
+    /**
+     *
+     * Method to get the data of our prestamo
+     * @param mypath String with the path of our neodatis file
+     */
     public static void prstData(String mypath) {
         ODB odb = ODBFactory.open(mypath);
         show.showUser(odb);
@@ -44,6 +82,10 @@ public class Consultas {
         odb.close();
     }
 
+    /**
+     * Method to edit the Usuario in a certain Prestamo
+     * @param mypath String with the path of our neodatis file
+     */
     public static void editPrst(String mypath) {
         ODB odb = ODBFactory.open(mypath);
 

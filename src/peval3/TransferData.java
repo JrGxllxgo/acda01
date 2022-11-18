@@ -1,5 +1,12 @@
 package peval3;
 
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Class that we use to set our PHPMyAdmin in a Neodatis file
+ */
+
 import java.sql.*;
 import org.neodatis.odb.*;
 import org.neodatis.odb.core.query.criteria.Where;
@@ -9,6 +16,14 @@ public class TransferData {
     private Statement myStatement;
 
     private ODB odb;
+
+    /**
+     * Constructor of the class
+     * @param MYPATH String with the path to set our new Neodatis file
+     * @param DBNAME String with the name of our db at PHPMyAdmin
+     * @param DBUSER String with the name of our user at PHPMyAdmin
+     * @throws SQLException
+     */
     TransferData(String MYPATH, String DBNAME, String DBUSER) throws SQLException {
         createBDConnection(DBNAME, DBUSER);
         createNeoDB(MYPATH);
@@ -29,6 +44,8 @@ public class TransferData {
 
     /**
      * Method were we create the connection with the DB
+     * @param DBNAME String with the name of our db at PHPMyAdmin
+     * @param DBUSER String with the name of our user at PHPMyAdmin
      */
     public void createBDConnection(String DBNAME, String DBUSER) {
         try {
@@ -115,6 +132,10 @@ public class TransferData {
         odb.commit();
     }
 
+    /**
+     * Getter of our db
+     * @return odb
+     */
     public ODB getOdb() {
         return odb;
     }

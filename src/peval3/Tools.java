@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 
  * @author José Ramón Gallego Vélez
  * @date 15/11/2022
- * @version 1.0
+ * @version 0
  * 
  * @info On this class we use basic methods to use in all class
  */
@@ -34,8 +34,7 @@ public class Tools {
 	}
 	/**
 	 * Method that receive a text and prints it
-	 * 
-	 * @param txt
+	 * @param txt String with the text to show
 	 */
 	public static void print(String txt) {
 		System.out.println(txt);
@@ -43,8 +42,7 @@ public class Tools {
 
 	/**
 	 * Method that ask for a number to select the option
-	 * 
-	 * @param text
+	 * @param text String with the text to show
 	 * @return number selection
 	 */
 	public static int keyBoardInt(String text) {
@@ -55,8 +53,7 @@ public class Tools {
 
 	/**
 	 * Method that ask for a number to select the option
-	 * 
-	 * @param text
+	 * @param text String with the text to show
 	 * @return number selection
 	 */
 	public static String keyBoardString(String text) {

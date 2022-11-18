@@ -2,6 +2,13 @@ package peval3;
 
 import java.util.Date;
 
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Class with prestamos data
+ */
+
 public class Prestamos {
 
     /**
