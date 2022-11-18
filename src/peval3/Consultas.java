@@ -11,6 +11,7 @@ import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 import org.neodatis.odb.Objects;
 import org.neodatis.odb.core.query.IQuery;
+import org.neodatis.odb.core.query.criteria.And;
 import org.neodatis.odb.core.query.criteria.ICriterion;
 import org.neodatis.odb.core.query.criteria.Where;
 import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
@@ -25,7 +26,7 @@ public class Consultas {
     private static Comprobaciones check = new Comprobaciones();
 
     /**
-     * Method to get the genre of our book
+     * Method to get the genre of our book depending on a maximum price
      * @param mypath String with the path of our neodatis file
      */
     public static void genreBook(String mypath) {
@@ -37,18 +38,25 @@ public class Consultas {
         int precioTope = myTools.keyBoardInt("Introduzca el Precio Maximo a consultar: ");
 
         if(check.checkGenero(generoLibro, odb)){
-            IQuery getLibros = new CriteriaQuery(Libros.class, Where.equal("genero", generoLibro));
-            Libros libro = (Libros) odb.getObjects(getLibros).getFirst();
-            ICriterion price = Where.le("precioLibro", precioTope);
-            System.out.println(price);
+            ICriterion criterion = new And().add(Where.equal("genero", generoLibro)).add(Where.le("precioLibro", precioTope));
+            IQuery getLibros = new CriteriaQuery(Libros.class, criterion);
+            Objects<Libros> libros = odb.getObjects(getLibros);
+
+            while(libros.hasNext()){
+                Libros libros1 = libros.next();
+                myTools.print("Nombre del libro: " + libros1.getNombreLibro() +
+                        "\nGenero del libro: " + libros1.getGenero() +
+                        "\nPrecio del libro: " + libros1.getPrecioLibro() +
+                        "\n----------------------------");
+            }
         }else{
             myTools.print("El genero introducido no existe");
         }
 
         odb.close();
     }
+
     /**
-     *
      * Method to get the data of our prestamo
      * @param mypath String with the path of our neodatis file
      */
@@ -72,7 +80,8 @@ public class Consultas {
 
                 Prestamos prst = (Prestamos) odb.getObjects(queryFechas).getFirst();
 
-                System.out.println(prst.getNumeroPedido());
+                myTools.print("Prestamo con retardo: "  + prst.getNumeroPedido() +
+                        "\n--------------------------------------------");
             }
 
         }catch (IndexOutOfBoundsException e){

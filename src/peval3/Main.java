@@ -7,6 +7,8 @@ package peval3;
  * @info Project for Neodatis learning in a case of a library management
  */
 
+import com.db4o.foundation.Environment;
+
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 
@@ -38,8 +40,7 @@ public class Main {
                         "\n3: Modificar un préstamo" +
                         "\n4: Préstamos con retardo de usuario" +
                         "\n5: Libro de un género según precio máximo" +
-                        "\n6: Préstamo por provincia en x tiempo" +
-                        "\n7: SALIR");
+                        "\n6: SALIR");
                 switch (numOption){
                     case 0:
                          new TransferData(myConfig.getMYPATH(), myConfig.getDBNAME(), myConfig.getDBUSER());
@@ -69,8 +70,8 @@ public class Main {
                         myCons.genreBook(myConfig.getMYPATH());
                         break;
                     case 6:
-                        break;
-                    case 7:
+                        myTools.print("Hasta luego!!");
+                        System.exit(0);
                         break;
                     default: //default message if the user tries to use an option that doesnt exist
                         myTools.print("Opcion no válida");
