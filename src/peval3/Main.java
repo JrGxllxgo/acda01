@@ -1,30 +1,26 @@
 package peval3;
 
-import org.neodatis.odb.ODB;
-import org.neodatis.odb.ODBFactory;
-import org.neodatis.odb.Objects;
-import org.neodatis.odb.core.query.IQuery;
-import org.neodatis.odb.core.query.criteria.ICriterion;
-import org.neodatis.odb.core.query.criteria.Where;
-import org.neodatis.odb.impl.core.query.criteria.CriteriaQuery;
-import org.neodatis.odb.impl.core.query.values.ValuesCriteriaQuery;
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Project for Neodatis learning in a case of a library management
+ */
 
 import java.sql.SQLException;
 import java.util.InputMismatchException;
 
 public class Main {
+
+    /**
+     * Using another classes in main
+     */
     private static Tools myTools = new Tools();
-    private static MostrarDatos show = new MostrarDatos();
-    private static Comprobaciones checkers = new Comprobaciones();
     private static Consultas myCons = new Consultas();
     private static Gestion gest = new Gestion();
-    private static TransferData myTransferData;
+
+    private static Config myConfig =  new Config();
     public static void main(String[] args) {
-
-
-        String MYPATH = "D:\\2 DAM\\ACDA\\acda01\\src\\peval3\\biblioteca.neo";
-        String DBNAME = "biblioteca";
-        String DBUSER = "root";
 
         /**
          * Integer numOption give you a number to use at the menu
@@ -46,7 +42,7 @@ public class Main {
                         "\n7: SALIR");
                 switch (numOption){
                     case 0:
-                         new TransferData(MYPATH, DBNAME, DBUSER);
+                         new TransferData(myConfig.getMYPATH(), myConfig.getDBNAME(), myConfig.getDBUSER());
                         break;
                     case 1:
                         String nombreLibro = myTools.keyBoardString("Introduzca el Titulo del Libro");
@@ -58,25 +54,25 @@ public class Main {
                         int anyoEdicion = myTools.keyBoardInt("Introduzca el Anho de Edicion del Libro");
                         int precioLibro = myTools.keyBoardInt("Introduzca el Precio del Libro");
 
-                        gest.newBook(MYPATH, nombreLibro, editorial, autor, genero, paisAutor, numPags, anyoEdicion, precioLibro);
+                        gest.newBook(myConfig.getMYPATH(), nombreLibro, editorial, autor, genero, paisAutor, numPags, anyoEdicion, precioLibro);
                         break;
                     case 2:
-                        gest.deleteUser(MYPATH);
+                        gest.deleteUser(myConfig.getMYPATH());
                         break;
                     case 3:
-                        myCons.editPrst(MYPATH);
+                        myCons.editPrst(myConfig.getMYPATH());
                         break;
                     case 4:
-                        myCons.prstData(MYPATH);
+                        myCons.prstData(myConfig.getMYPATH());
                         break;
                     case 5:
-                        myCons.genreBook(MYPATH);
+                        myCons.genreBook(myConfig.getMYPATH());
                         break;
                     case 6:
                         break;
                     case 7:
                         break;
-                    default: //defaultt message if the user tries to use an option that doesnt exist
+                    default: //default message if the user tries to use an option that doesnt exist
                         myTools.print("Opcion no válida");
                 }
             }catch (InputMismatchException e) { //controlling that the user not introduce text

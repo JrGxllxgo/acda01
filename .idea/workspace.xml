@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="end prestamos tarde, falta darle formato">
-      <change afterPath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/peval3/Gestion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" afterDir="false" />
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="modulacización del proyecto">
+      <change afterPath="$PROJECT_DIR$/src/peval3/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Consultas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Gestion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,23 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "two.files.diff.last.used.file": "D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2 DAM\ACDA\acda01\src\BDOO_01\neodatis" />
@@ -121,7 +123,9 @@
       <workItem from="1668619943348" duration="5754000" />
       <workItem from="1668669082268" duration="2041000" />
       <workItem from="1668673560375" duration="1795000" />
-      <workItem from="1668676524237" duration="1326000" />
+      <workItem from="1668676524237" duration="2155000" />
+      <workItem from="1668707820511" duration="5594000" />
+      <workItem from="1668755639343" duration="1652000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -256,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668674795203</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="modulacización del proyecto">
+      <created>1668678090861</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1668678090861</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +304,8 @@
     <MESSAGE value="modificar prestamo hecho" />
     <MESSAGE value="starting fechas" />
     <MESSAGE value="end prestamos tarde, falta darle formato" />
-    <option name="LAST_COMMIT_MESSAGE" value="end prestamos tarde, falta darle formato" />
+    <MESSAGE value="modulacización del proyecto" />
+    <option name="LAST_COMMIT_MESSAGE" value="modulacización del proyecto" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

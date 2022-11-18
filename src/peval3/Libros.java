@@ -1,5 +1,12 @@
 package peval3;
 
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Class with books data
+ */
+
 public class Libros {
 
     /**

@@ -1,11 +1,35 @@
 package peval3;
 
+/**
+ * @author José Ramón Gallego Vélez
+ * @project peval3acda2223
+ * @version v0
+ * @info Class to show some certain data
+ */
+
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.Objects;
 
 public class MostrarDatos {
 
     Tools myTools = new Tools();
+
+    /**
+     * Method where we show to the user all Books
+     * @param odb ODB that has our Neodatis file
+     */
+    public void showBooks(ODB odb){
+        Objects<Libros> objects = odb.getObjects(Libros.class);
+
+        while(objects.hasNext()){
+            Libros libro = objects.next();
+            myTools.print("Codigo Libro: " + libro.getCodigoLibro() +
+                    "\nNombre Libro: " + libro.getNombreLibro() +
+                    "\nGenero: " + libro.getGenero() +
+                    "\nPrecio Libro: " + libro.getPrecioLibro());
+            myTools.print("----------------------------------------------------");
+        }
+    }
 
     /**
      * Method where we show to the user all Prestamos
