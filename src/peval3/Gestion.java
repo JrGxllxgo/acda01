@@ -46,7 +46,8 @@ public class Gestion {
                     "\n" +  checkCode.getDomicilio() +
                     "\n" +  checkCode.getPoblacion() +
                     "\n" +  checkCode.getProvincia() +
-                    "\n" +  checkCode.getFechaNacimiento());
+                    "\n" +  checkCode.getFechaNacimiento() +
+                    "\n-------------------------------------------------");
             odb.delete(checkCode);
             odb.commit();
             myTools.print("Usuario borrado!!");

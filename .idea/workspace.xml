@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="modulacización del proyecto">
-      <change afterPath="$PROJECT_DIR$/src/peval3/Config.java" afterDir="false" />
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="terminado, falta 6 y 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Consultas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/peval3/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Gestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <workItem from="1668673560375" duration="1795000" />
       <workItem from="1668676524237" duration="2155000" />
       <workItem from="1668707820511" duration="5594000" />
-      <workItem from="1668755639343" duration="1652000" />
+      <workItem from="1668755639343" duration="3425000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -267,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668678090861</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="terminado, falta 6 y 7">
+      <created>1668758264721</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1668758264721</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +308,8 @@
     <MESSAGE value="starting fechas" />
     <MESSAGE value="end prestamos tarde, falta darle formato" />
     <MESSAGE value="modulacización del proyecto" />
-    <option name="LAST_COMMIT_MESSAGE" value="modulacización del proyecto" />
+    <MESSAGE value="terminado, falta 6 y 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="terminado, falta 6 y 7" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
