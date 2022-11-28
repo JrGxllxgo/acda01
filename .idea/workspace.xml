@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="terminado, falta 6 y 7">
+    <list default="true" id="ff3567fd-a2f4-40f0-b860-b887e8f21c5b" name="Changes" comment="TERMINAO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Consultas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/peval3/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Comprobaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Comprobaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Consultas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Gestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Gestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Libros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/MostrarDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/MostrarDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Prestamos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Prestamos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/TransferData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/TransferData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/peval3/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/peval3acda2223/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,24 +47,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "two.files.diff.last.used.file": "D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;D:/2 DAM/ACDA/acda01/src/peval2acda2223/DBConnection.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2 DAM\ACDA\acda01\src\BDOO_01\neodatis" />
@@ -65,7 +74,7 @@
       <recent name="exercisesBdoo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.peval3.Main">
+  <component name="RunManager" selected="Application.peval3acda2223.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="peval2acda2223.Main" />
       <module name="acda01" />
@@ -79,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="peval3.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="peval3.Main" />
+    <configuration name="peval3acda2223.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="peval3acda2223.Main" />
       <module name="acda01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="peval3.*" />
+          <option name="PATTERN" value="peval3acda2223.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,7 +103,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.peval3.Main" />
+        <item itemvalue="Application.peval3acda2223.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -121,7 +130,13 @@
       <workItem from="1668673560375" duration="1795000" />
       <workItem from="1668676524237" duration="2155000" />
       <workItem from="1668707820511" duration="5594000" />
-      <workItem from="1668755639343" duration="3425000" />
+      <workItem from="1668755639343" duration="4096000" />
+      <workItem from="1668768630489" duration="73000" />
+      <workItem from="1668854388237" duration="391000" />
+      <workItem from="1669049267706" duration="75000" />
+      <workItem from="1669187658580" duration="4024000" />
+      <workItem from="1669307895269" duration="72000" />
+      <workItem from="1669619229108" duration="1424000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 4 start with BD00">
       <created>1667376062158</created>
@@ -270,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668758264721</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="TERMINAO">
+      <created>1668759228902</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668759228902</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +331,8 @@
     <MESSAGE value="end prestamos tarde, falta darle formato" />
     <MESSAGE value="modulacización del proyecto" />
     <MESSAGE value="terminado, falta 6 y 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="terminado, falta 6 y 7" />
+    <MESSAGE value="TERMINAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="TERMINAO" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
