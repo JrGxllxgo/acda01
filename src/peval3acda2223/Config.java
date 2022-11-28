@@ -1,4 +1,4 @@
-package peval3;
+package peval3acda2223;
 
 /**
  * @author José Ramón Gallego Vélez
@@ -10,7 +10,7 @@ public class Config {
     /**
      * String MYPATH has the path where we´ll save the neodatis file
      */
-    private String MYPATH = "D:\\2 DAM\\ACDA\\acda01\\src\\peval3\\biblioteca.neo";
+    private String MYPATH = "D:\\2 DAM\\ACDA\\db\\neodatis\\biblioteca.neo";
     /**
      * String DBNAME has the name of our PHPMyAdmin database
      */
